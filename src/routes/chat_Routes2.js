@@ -10,14 +10,7 @@ router.post('/', async (req, res) => {
     
     const responseMessage = await getBotResponse(message);
 
-    // const userMessage = {
-    //     userMessage: message,
-    //     botResponse: responseMessage
-    // };
-
-    // conversationHistory.push({userMessage: message,
-    //     botResponse: responseMessage});
-
+    
     await Conversation.create({ userId, message, response: responseMessage });
 
     res.json({ response: responseMessage });
