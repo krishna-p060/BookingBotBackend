@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { Conversation } = require('../models/conversation');
-const { Room } = require('../models/room');
+
 const { getBotResponse  } = require('../services/chat_service');
 
 
